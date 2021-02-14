@@ -246,16 +246,16 @@ call s:Hi('Error', s:p.error)
 
 "" Constants
 highlight! link TSConstant Purple
-highlight! link TSConstBuiltin Purple
+highlight! link TSConstBuiltin Error
 
 highlight! link TSString Green
-highlight! link TSStringRegex BrightYellow
+highlight! link TSStringRegex Error
 highlight! link TSStringEscape Orange
-highlight! link TSCharacter Green
+highlight! link TSCharacter Error
 
 highlight! link TSNumber Blue
 highlight! link TSBoolean Orange
-highlight! link TSFloat Blue
+highlight! link TSFloat Error
 
 "" Functions
 highlight! link TSFunction Yellow
@@ -263,48 +263,49 @@ highlight! link TSFuncMacro YellowItalic
 highlight! link TSFuncBuiltin Italic
 
 highlight! link TSParameter Normal
-highlight! link TSParameterReference Normal
+highlight! link TSParameterReference Error
 
-highlight! link TSMethod PurpleItalic
+" highlight! link TSMethod PurpleItalic
+highlight! link TSMethod Yellow
 highlight! link TSField Purple
 highlight! link TSProperty Purple
 
-highlight! link TSConstructor Orange
+highlight! link TSConstructor Error
 
 "" Keywords
 highlight! link TSConditional Orange
 highlight! link TSRepeat Orange
-highlight! link TSLabel BrightYellow
+highlight! link TSLabel Error
 
 highlight! link TSKeyword Orange
-highlight! link TSKeywordFunction YellowItalic
+highlight! link TSKeywordFunction Error
 highlight! link TSKeywordOperator YellowItalic
 highlight! link TSOperator Normal
-highlight! link TSException Orange
+highlight! link TSException Error
 highlight! link TSInclude Orange
 
 highlight! link TSType Blue
-highlight! link TSTypeBuiltin Blue
+highlight! link TSTypeBuiltin Error
 
-highlight! link TSNamespace Blue
-highlight! link TSAttribute BrightYellow
+highlight! link TSNamespace Error
+highlight! link TSAttribute Yellow2
 
 "" Variables
 highlight! link TSVariable Normal
 highlight! link TSVariableBuiltin Bold
 
 "" Text
-highlight! link TSText Normal
-highlight! link TSStrong Bold
-highlight! link TSEmphasis Bold
-highlight! link TSUnderline Underlined
-highlight! link TSTitle Bold
-highlight! link TSLiteral Green
-highlight! link TSURI Underlined
+highlight! link TSText Error
+highlight! link TSStrong Error
+highlight! link TSEmphasis Error
+highlight! link TSUnderline Error
+highlight! link TSTitle Error
+highlight! link TSLiteral Error
+highlight! link TSURI Error
 
 "" Tags
-highlight! link TSTag Orange
-highlight! link TSTagDelimiter Orange
+highlight! link TSTag Error
+highlight! link TSTagDelimiter Error
 
 "" Punctuation
 highlight! link TSPunctBracket Normal
@@ -314,6 +315,11 @@ highlight! link TSPunctSpecial Orange
 "" Special
 highlight! link TSNone Normal
 highlight! link TSError Error
+
+highlight! link LspDiagnosticsDefaultHint Blue
+highlight! link LspDiagnosticsDefaultWarning Orange
+highlight! link LspDiagnosticsDefaultError Error
+highlight! link LspDiagnosticsDefaultInformation YellowItalic
 
 
 " Neovim
